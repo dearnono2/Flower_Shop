@@ -1,0 +1,225 @@
+@charset 'utf-8';
+
+// reset css
+@import 'reset.scss';
+
+// font style
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+#header {
+  width: 100%;
+
+  .inner {
+    width: 1180px; height: 150px;
+    margin: 0 auto;
+    position: relative;
+
+    h1 {
+      position: absolute;
+      top: 30px; left: 50%;
+      transform: translateX(-50%);
+
+      a {
+        font: bold 28px/1 'arial';
+        color: #444;
+      }
+    }
+    .menuWeb {
+      #gnb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        border-bottom: 1px solid #555;
+        border-top: 1px solid #555;
+
+        li {
+          float: left;
+          margin: 0 50px;
+          a {
+            color: #333;
+          }
+        }
+        &::after {
+          content: '';
+          display: block;
+          margin-top: 40px;
+        }
+      }
+      .util {
+        position: absolute;
+        top: 50px; right: 40px;
+
+        li {
+          float: left;
+          margin-left: 20px;
+          i {
+            color: #9D5353;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* figure visual 영역 */
+
+#visual {
+  width: 100%; height: calc(100vh - 182px);
+  overflow: hidden;
+  background: #000;
+  margin-top: 30px;
+
+  video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      color: #fff;
+    }
+    #visual-btn {
+      font-size: 16px;
+      margin-top: 30px;
+      padding: 6px 30px;
+      border: 1px solid #fff;
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}
+
+/* section - new to store 영역 */
+
+#new-arrival {
+  width: 100%;
+  padding: 200px 0;
+
+  .inner {
+    width: 1060px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    h1 {
+      font: bold 24px/1 'arial';
+      color: #555;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    i {
+      font-size: 40px;
+      color: #555;
+    }
+    .fa-angle-left {
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .fa-angle-right {
+      position: absolute;
+      top: 0; right: 0;
+    }
+
+    .wrap {
+      width: 600%;
+
+      article {
+        float: left;
+        width: 250px;
+        margin-right: 20px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        .pic {
+          width: 100%; height: 250px;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: 1s;
+          img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* section - why choose seoul flower? 영역 */
+
+#why-seoul-flower {
+  width: 100%;
+
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    background: #DACC96;
+    text-align: center;
+    h2 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    & > p {
+      padding-bottom: 150px;
+    }
+
+    .wrap {
+      width: 100%; height: 100%;
+      position: relative;
+      article {
+        width: 50%;
+        &:nth-of-type(1) {
+          float: left;
+          .reason {
+            width: 100%;
+            padding: 50px;
+            margin-bottom: 50px;
+            img {
+              width: 100%;
+              border-radius: 30px;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          float: left;
+          height: 1290px;
+          // sticky 속성은 부모의 높이 px이 필수. %단위는 x
+          .reason-answer {
+            position: sticky;
+            margin: 0 auto;
+            padding: 50px;
+            width: 400px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* section - delivery service 영역 */
+
+#delivery {
+  .inner {
+    width: 1180px;
+    margin: 0 auto;
+    text-align: center;
+    background: #888;
+    h2 {
+      font-size: 40px;
+      padding: 100px;
+    }
+  }
+}
