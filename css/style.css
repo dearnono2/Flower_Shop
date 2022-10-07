@@ -131,7 +131,7 @@ a {
 #new-arrival .inner {
   width: 1120px;
   margin: 0 auto;
-  overflow: hidden;
+  position: relative;
 }
 #new-arrival .inner h1 {
   font: bold 24px/1 "arial";
@@ -139,47 +139,52 @@ a {
   text-align: center;
   margin-bottom: 50px;
 }
+#new-arrival .inner i {
+  position: absolute;
+  font-size: 50px;
+  color: #555;
+  bottom: 150px;
+}
+#new-arrival .inner .fa-angle-left {
+  left: -100px;
+}
+#new-arrival .inner .fa-angle-right {
+  right: -100px;
+}
 #new-arrival .inner .wrap {
+  width: 100%;
+  overflow: hidden;
+}
+#new-arrival .inner .wrap .wrap-imgs {
   width: 1700px;
 }
-#new-arrival .inner .wrap article {
+#new-arrival .inner .wrap .wrap-imgs article {
   float: left;
   width: 250px;
   margin-right: 40px;
   text-align: center;
 }
-#new-arrival .inner .wrap article:last-of-type {
+#new-arrival .inner .wrap .wrap-imgs article:last-of-type {
   margin-right: 0;
 }
-#new-arrival .inner .wrap article .pic {
+#new-arrival .inner .wrap .wrap-imgs article .pic {
   width: 100%;
   height: 250px;
   overflow: hidden;
   transition: 1s;
 }
-#new-arrival .inner .wrap article .pic img {
+#new-arrival .inner .wrap .wrap-imgs article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
-#new-arrival .inner .wrap article h2 a {
+#new-arrival .inner .wrap .wrap-imgs article h2 a {
   font-size: 20px;
   color: #798777;
 }
-#new-arrival i {
-  position: absolute;
-  font-size: 50px;
-  color: #555;
-  bottom: 360px;
-}
-#new-arrival .fa-angle-left {
-  left: 100px;
-}
-#new-arrival .fa-angle-right {
-  right: 100px;
-}
-#new-arrival .new-arrival-bg {
+
+.new-arrival-bg {
   position: absolute;
   width: 100%;
   height: 340px;
@@ -191,7 +196,7 @@ a {
 /* section - occasion 영역 */
 #occasions {
   width: 100%;
-  padding: 200px 0;
+  padding: 100px 0;
   background: #BDD2B6;
 }
 #occasions .inner {
@@ -200,7 +205,7 @@ a {
   position: relative;
 }
 #occasions .inner h1 {
-  font-size: 24px;
+  font-size: 40px;
   color: #555;
   text-align: center;
   margin-bottom: 50px;
@@ -216,11 +221,11 @@ a {
 #occasions .inner .wrap article:nth-of-type(1) {
   width: 380px;
   height: 620px;
-  background: #444;
   float: left;
   margin-right: 20px;
   padding: 170px 50px 0;
   text-align: center;
+  border: 2px solid #333;
 }
 #occasions .inner .wrap article:nth-of-type(1) i {
   font-size: 100px;
