@@ -2,6 +2,8 @@
 
 // reset css
 @import 'reset.scss';
+@import 'faqs.scss';
+@import 'about.scss';
 
 // font style
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
@@ -11,6 +13,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+// body {
+//   background-color: #FDFAF6;
+// }
+
 #header {
   width: 100%;
 
@@ -19,14 +25,23 @@
     margin: 0 auto;
     position: relative;
 
-    h1 {
+    .logo {
       position: absolute;
-      top: 30px; left: 50%;
+      top: 0; left: 50%;
       transform: translateX(-50%);
 
       a {
-        font: bold 28px/1 'arial';
-        color: #444;
+        background: url(../img/logo4.png) no-repeat;
+        width: 200px; height: 100px;
+        display: block;
+
+        // ir 기법으로 logo text 안보이게 하기
+        span {
+          position: absolute;
+          clip: rect(0,0,0,0);
+          width: 0; height: 0;
+        }
+
       }
     }
     .menuWeb {
@@ -39,12 +54,36 @@
         bottom: 0;
         border-bottom: 1px solid #555;
         border-top: 1px solid #555;
-
+        // hover 효과
         li {
           float: left;
           margin: 0 50px;
           a {
             color: #333;
+            position: relative;
+            display: inline-block;
+            transition: 0.3s;
+            transform-origin: 50% 0;
+            transform-style: preserve-3d;
+            &::before {
+              position: absolute;
+              top: 100%; left: 0;
+              width: 100%; height: 100%;
+              content: attr(data-hover);
+              transition: 0.3s;
+              transform: rotateX(-90deg);
+              transform-origin: 50% 0;
+            }
+          }
+          &:hover,
+          &:focus
+          {
+            a {
+              transform: rotateX(90deg) translateY(-22px);
+              &::before {
+                border-bottom: 1px solid #333;
+              }
+            }
           }
         }
         &::after {
@@ -60,8 +99,16 @@
         li {
           float: left;
           margin-left: 20px;
-          i {
-            color: #9D5353;
+          a {
+            color: #333;
+            font-size: 14px;
+            i {
+              color: #9D5353;
+            }
+          }
+          &:hover a,
+          &:hover i {
+            color: goldenrod;
           }
         }
       }
@@ -101,6 +148,11 @@
       color: #fff;
       background-color: transparent;
       cursor: pointer;
+      &:hover {
+        background: #fff;
+        opacity: 0.8;
+        color: black;
+      }
     }
   }
 }
@@ -119,7 +171,7 @@
 
 
     h1 {
-      font: bold 24px/1 'arial';
+      font: bold 34px/1 'arial';
       color: #555;
       text-align: center;
       margin-bottom: 50px;
@@ -131,21 +183,21 @@
       font-size: 50px;
       color: #555;
       bottom: 150px;
+      cursor: pointer;
     }
     .fa-angle-left {
-  
     left: -100px;
     }
     .fa-angle-right {
-  
     right: -100px;
     }
 
     .wrap {
-      width: 100%;
+      width: 100%; // 1120px
       overflow: hidden;
       .wrap-imgs {
         width: 1700px;
+        
         article {
           float: left;
           width: 250px;
@@ -157,11 +209,13 @@
           .pic {
             width: 100%; height: 250px;
             overflow: hidden;
-            transition: 1s;
             img {
               width: 100%; height: 100%;
               object-fit: cover;
-              transition: 0.5s;
+              transition: all 0.5s;
+            }
+            &:hover img {
+              transform: scale(1.1);
             }
           }
           h2 {
@@ -187,8 +241,8 @@
 /* section - occasion 영역 */
 #occasions {
   width: 100%;
-  padding: 100px 0;
-  background: #BDD2B6;
+  padding: 200px 0;
+  background: #E4EFE7;
   .inner {
     width: 1180px;
     margin: 0 auto;
@@ -201,66 +255,89 @@
     }
     .wrap {
       width: 100%;
+      position: relative;
       article {
         // 첫번째 occasion article
         &:nth-of-type(1) {
-          width: 380px; height: 620px;
-          // background: #444;
-          float: left;
-          margin-right: 20px;
-          padding: 170px 50px 0;
-          text-align: center;
-          border: 2px solid #333;
-          i {
-            font-size: 100px;
-            color: #fff;
-            margin-bottom: 20px;
-          }
-          h2 {
-            font-size: 20px/1;
-            color: #fff;
-            margin-bottom: 30px;
-          }
-          p {
-            font: 14px/1.3 'arial';
-            color: #999;
-            margin-bottom: 30px;
-          }
-          a {
-            display: block;
-            /* a값은 버튼을 만들것이기 때문에 display: block을 해줘야한다. */
-            width: 150px; height: 30px;
-            font: 11px/30px 'arial';
-            color: #ddd;
-            border: 1px solid #bbb;
-            margin: 0 auto;
-          }
-          
-        }
-        /* 두번째 brand article */
-        &:nth-of-type(2) {
-          width: 380px; height: 300px; 
+          position: relative;
+          width: 50%; height: 400px;
           background: #444;
           float: left;
           img {
             width: 100%; height: 100%;
             object-fit: cover;
           }
+          &::after {
+            content: '';
+            display: block;
+            width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background: linear-gradient(45deg, rgba(255, 192, 203, 0.4), rgba(173, 216, 230, 0.4));
+            opacity: 0;
+            transition: 0.5s;
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
         }
-        /* 세번째 brand article */
-        &:nth-of-type(3) {
-          width: 380px; height: 300px;
+        /* 두번째 brand article */
+        &:nth-of-type(2) {
+          position: relative;
+          width: 50%; height: 400px; 
+          background: #444;
           float: left;
           img {
             width: 100%; height: 100%;
             object-fit: cover;
           }
+          &::after {
+            content: '';
+            display: block;
+            width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background: linear-gradient(45deg, rgba(255, 192, 203, 0.4), rgba(173, 216, 230, 0.4));
+            opacity: 0;
+            transition: 0.5s;
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+        /* 세번째 brand article */
+        &:nth-of-type(3) {
+          position: relative;
+          width: 50%; height: 400px;
+          float: left;
+          img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+          }
+          &::after {
+            content: '';
+            display: block;
+            width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background: linear-gradient(45deg, rgba(255, 192, 203, 0.4), rgba(173, 216, 230, 0.4));
+            opacity: 0;
+            transition: 0.5s;
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
         }
         /* 네번째 brand article */
         &:nth-of-type(4) {
-          width: 780px; height: 300px;
+          width: 50%; height: 400px;
           float: left;
-          margin-top: 20px;
           position: relative;
           img {
             width: 100%; height: 100%;
@@ -280,6 +357,24 @@
             &::after {
               opacity: 1;
             }
+          }
+        }
+        /* 다섯번째 brand article */
+        &:nth-of-type(5) {
+          position: absolute;
+          top: 50%; left: 50%;
+          transform: translate(-50%,-50%);
+          width: 260px; height: 220px;
+          background-color: #F0F2B6;
+          padding: 30px;
+          // padding: 170px 50px 0;
+          text-align: center;
+          // border: 2px solid #333;
+          h2 {
+            font: bold 20px/1.2 'Raleway';
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 30px;
           }
         }
       }
@@ -319,7 +414,7 @@
     width: 1180px;
     padding-top: 150px;
     margin: 0 auto;
-    background: #DACC96;
+    background: #FAF1E6;
     text-align: center;
     h2 {
       font-size: 40px;
@@ -332,6 +427,7 @@
     .wrap {
       width: 100%; height: 100%;
       position: relative;
+      // 왼쪽 article
       article {
         width: 50%;
         &:nth-of-type(1) {
@@ -339,16 +435,30 @@
           .reason {
             width: 100%;
             padding: 50px;
-            margin-bottom: 50px;
+            margin: 100px 0 250px 0;
+            transform: translateX(-200%);
+            transition: transform 0.4s ease;
             img {
               width: 100%;
+            }
+            &.one {
 
+            }
+            &.two {
+  
+            }
+            &.three {
+  
+            }
+            &.show {
+              transform: translateX(0);
             }
           }
         }
+        // 오른쪽 article
         &:nth-of-type(2) {
           float: left;
-          height: 1290px;
+          height: 2000px;
           // sticky 속성은 부모의 높이 px이 필수. %단위는 x
           .reason-answer {
             position: sticky;
@@ -392,7 +502,7 @@
 
 #footer {
   width: 100%;
-  background: #444;
+  background: #064420;
   padding: 100px 0;
   .inner {
     width: 1180px;
@@ -404,7 +514,7 @@
     }
     h1 {
       font: bold 24px/1 'arial';
-      color: #666;
+      color: #ccc;
       float: left;
     }
     ul {
@@ -414,7 +524,7 @@
         margin-left: 20px;
         a {
           font: bold 14px/1 'arial';
-          color: #666;
+          color: #ccc;
         }
       }
     }
@@ -422,17 +532,17 @@
       float: left;
       width: 100%;
       font: 12px/1 'arial';
-      color: #777;
+      color: #ccc;
       margin-bottom: 20px;
       margin-top: 20px;
       padding-top: 20px;
-      border-top: 1px solid #888;
+      border-top: 1px solid #ccc;
     }
     p {
       float: left;
       width: 100%;
       font: 12px/1 'arial';
-      color: #777;
+      color: #ddd;
     }
   }
 }

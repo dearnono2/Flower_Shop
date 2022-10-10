@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flower Shop</title>
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="main.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/anime.js"></script>
   <script src="https://kit.fontawesome.com/a9d0d508cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,23 +15,25 @@
   <header id="header">
     <div class="inner">
       <!-- logo -->
-      <h1>
-        <a href="#">Flower Shop</a>
+      <h1 class="logo">
+        <a href="index.html">
+          <span>Flower Shop</span>
+        </a>
       </h1>
       <nav class="menuWeb">
         <!-- util -->
         <ul class="util">
-          <li>login <i class="fa-solid fa-right-to-bracket"></i></li>
-          <li>cart <i class="fa-solid fa-cart-shopping"></i></li>
-          <li>search <i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><a href="">login <i class="fa-solid fa-right-to-bracket"></i></a></li>
+          <li><a href="">cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="">search <i class="fa-solid fa-magnifying-glass"></i></a></li>
         </ul>
         <!-- global navigation bar -->
         <ul id="gnb">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="shop.html">SHOP</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="fqas.html">FQAS</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.html" data-hover="HOME">HOME</a></li>
+          <li><a href="shop.html" data-hover="SHOP">SHOP</a></li>
+          <li><a href="about.html" data-hover="ABOUT">ABOUT</a></li>
+          <li><a href="faqs.html" data-hover="FAQS">FAQS</a></li>
+          <li><a href="contact.html" data-hover="CONTACT">CONTACT</a></li>
         </ul>
       </nav>
 
@@ -45,7 +48,9 @@
     <video src="img/visual.mp4" autoplay loop muted alt="main video"></video>
     <div class="inner">
       <h1>The becoming best flowers in seoul</h1>
-      <button id="visual-btn">shop now</button>
+      <button id="visual-btn">
+        <span data-hover="visual-btn">shop now</span>
+      </button>
     </div>
   </figure>
   <!-- // figure -->
@@ -55,8 +60,13 @@
     <div class="inner">
       <h1>New to store</h1>
       <!-- slider -->
-      <i class="fa-solid fa-angle-left"></i>
-      <i class="fa-solid fa-angle-right"></i>
+      <a href="#" class="prev">
+        <i class="fa-solid fa-angle-left"></i>
+      </a>
+      <a href="#" class="next">
+        <i class="fa-solid fa-angle-right"></i>
+      </a>
+      
       <!-- 신상품 6개 배치 -->
       <div class="wrap">
         <div class="wrap-imgs">
@@ -64,54 +74,54 @@
             <div class="pic">
               <img src="img/new1.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower1</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
           <article>
             <div class="pic">
               <img src="img/new2.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower2</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
           <article>
             <div class="pic">
               <img src="img/new3.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower3</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
           <article>
             <div class="pic">
               <img src="img/new4.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower4</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
           <article>
             <div class="pic">
               <img src="img/new5.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower5</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
           <article>
             <div class="pic">
               <img src="img/new6.jpg" alt="신상품1">
             </div>
-            <h2><a href="#">Flower</a></h2>
+            <h2><a href="#">Flower6</a></h2>
             <p>
-              가격
+              10$
             </p>
           </article>
         </div>
@@ -127,16 +137,19 @@
       <h1>FLOWERS FOR ALL OCCASIONS</h1>
       <div class="wrap">
         <article>
-          <h2>There are many occasions and moments deserving of flowers.</h2>
-        </article>
-        <article>
           <img src="img/occasion1.jpg" alt="gift flower">
         </article>
         <article>
           <img src="img/occasion2.jpg" alt="wedding flower">
         </article>
         <article>
-          <img src="img/occasion3.jpg" alt="home decor flower">
+          <img src="img/occasion3.jpg" alt="event flower">
+        </article>
+        <article>
+          <img src="img/occasion4.jpg" alt="home decor flower">
+        </article>
+        <article>
+          <h2>There are many occasions and moments deserving of flowers.</h2>
         </article>
       </div>
     </div>
@@ -164,14 +177,23 @@
       </p>
       <div class="wrap">
         <article>
-          <div class="reason">
+          <div class="reason one">
             <img src="img/reason1.jpg" alt="">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptas, facere asperiores dolore voluptatem neque possimus laudantium quod harum nesciunt.
+            </p>
           </div>
-          <div class="reason">
+          <div class="reason two">
             <img src="img/reason2.jpg" alt="">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptas, facere asperiores dolore voluptatem neque possimus laudantium quod harum nesciunt.
+            </p>
           </div>
-          <div class="reason">
+          <div class="reason three">
             <img src="img/reason3.jpg" alt="">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid voluptas, facere asperiores dolore voluptatem neque possimus laudantium quod harum nesciunt.
+            </p>
           </div>
         </article>
         <article>
