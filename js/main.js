@@ -86,7 +86,7 @@ const reasons = whySeoulFlower.querySelectorAll('.reason');
 
 
 window.addEventListener('scroll', (e) => {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if(window.scrollY > 3400) {
     reasons[0].classList.add('show');
   } else if (window.scrollY > 4000) {
@@ -127,3 +127,26 @@ window.addEventListener('scroll', (e) => {
 //     }
 //   })
 // }
+
+
+/* section delivery 영역 */
+const deliveryBg = document.querySelector('.delivery-bg');
+const carIcon = document.querySelector('.car');
+
+let pos = `${window.scrollY - carIcon.offsetTop}px`;
+const base = -300;
+
+
+window.addEventListener('scroll', () => {
+
+  let scroll = window.scrollY || window.pageYOffset;
+  let scroll2 = `${scroll - base}`;
+
+  carIcon.style.left = `${scroll2 - 6200}px`;
+
+})
+
+/* // section delivery 영역 */
+
+
+
