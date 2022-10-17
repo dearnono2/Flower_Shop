@@ -639,7 +639,7 @@ h1, h2 {
 }
 #testimonials .inner {
   width: 1180px;
-  padding: 200px 80px;
+  padding: 200px 80px 160px;
   margin: 0 auto;
 }
 #testimonials .inner .testimonials-wrap {
@@ -676,6 +676,37 @@ h1, h2 {
   display: block;
   content: "";
   clear: both;
+}
+
+/* section - ??? 영역 */
+#xxx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: #eee;
+}
+#xxx .inner {
+  width: 1000px;
+}
+#xxx .inner h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#xxx .inner .brands {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#xxx .inner .brands i {
+  font-size: 80px;
+  margin-right: 100px;
+}
+#xxx .inner .brands i:last-child {
+  margin-right: 0;
 }
 
 /* footer 영역 */
