@@ -82,6 +82,7 @@ a {
   font-size: 30px;
 }
 .faq-wrapper .inner #faq-ul .faq-list .answer {
+  width: 90%;
   font-size: 16px;
   letter-spacing: 1px;
   margin: 10px 0 10px 0;
