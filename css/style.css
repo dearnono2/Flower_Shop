@@ -31,27 +31,36 @@ a {
 }
 
 .top-pad {
+  position: relative;
   width: 100%;
-  height: calc(100vh - 182px);
+  height: 300px;
   overflow: hidden;
-  background: #eee;
+  background: url(../img/faq-bg.jpg);
   margin-top: 30px;
+}
+.top-pad .inner h1 {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .faq-wrapper {
-  background: #eee;
+  background: #fff;
   text-align: center;
   padding: 80px 0;
   color: #555;
 }
 .faq-wrapper .inner {
-  width: 580px;
+  width: 600px;
   margin: 0 auto;
 }
 .faq-wrapper .inner #faq-ul {
   border-top: 1px solid #ccc;
 }
 .faq-wrapper .inner #faq-ul .faq-list {
+  list-style: square;
   margin: 10px;
   padding: 10px;
   border-bottom: 1px solid #ccc;
@@ -60,17 +69,21 @@ a {
   text-align: left;
 }
 .faq-wrapper .inner #faq-ul .faq-list h2 {
-  font-size: 24px;
+  font-size: 20px;
+  width: 90%;
 }
 .faq-wrapper .inner #faq-ul .faq-list span {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 10px;
+  transform: translateY(-50%);
+  margin-left: 10px;
   color: #ccc;
   font-size: 30px;
 }
 .faq-wrapper .inner #faq-ul .faq-list .answer {
-  font-size: 12px;
+  font-size: 16px;
+  letter-spacing: 1px;
   margin: 10px 0 10px 0;
   display: none;
 }
@@ -578,7 +591,7 @@ h1, h2 {
   text-align: center;
 }
 #delivery .inner h2 {
-  font-size: 40px;
+  font-size: 46px;
   padding: 100px 0 20px;
 }
 #delivery .inner .delivery-bg {
@@ -595,16 +608,17 @@ h1, h2 {
   padding: 50px;
 }
 #delivery .inner .delivery-bg .delivery-txt p {
-  font-size: 20px;
+  font-size: 24px;
 }
 #delivery .inner .delivery-bg .delivery-txt ul {
   text-align: start;
-  width: 360px;
+  width: 460px;
   margin: 50px auto;
 }
 #delivery .inner .delivery-bg .delivery-txt ul li {
   font-weight: bold;
-  margin: 10px;
+  font-size: 18px;
+  margin: 20px 10px;
 }
 #delivery .inner .delivery-bg .delivery-txt ul li:nth-of-type(1) {
   color: #9D5353;
@@ -619,9 +633,49 @@ h1, h2 {
   width: 100%;
 }
 
-/* section - review 영역 */
-#review {
+/* section - testimonials 영역 */
+#testimonials {
   width: 100%;
+}
+#testimonials .inner {
+  width: 1180px;
+  padding: 200px 80px;
+  margin: 0 auto;
+}
+#testimonials .inner .testimonials-wrap {
+  text-align: center;
+}
+#testimonials .inner .testimonials-wrap h1 {
+  font-size: 30px;
+}
+#testimonials .inner .testimonials-wrap section {
+  width: 50%;
+  float: left;
+  padding: 5%;
+}
+#testimonials .inner .testimonials-wrap section .pic {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+#testimonials .inner .testimonials-wrap section .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#testimonials .inner .testimonials-wrap section h2 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+#testimonials .inner .testimonials-wrap section p {
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+#testimonials .inner .testimonials-wrap::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 /* footer 영역 */

@@ -87,7 +87,7 @@ const reasons = whySeoulFlower.querySelectorAll('.reason');
 
 window.addEventListener('scroll', (e) => {
   // console.log(window.scrollY);
-  if(window.scrollY > 3400) {
+  if(window.scrollY > 3380) {
     reasons[0].classList.add('show');
   } else if (window.scrollY > 4000) {
     reasons[0].classList.remove('show');
@@ -105,28 +105,6 @@ window.addEventListener('scroll', (e) => {
     reasons[2].classList.remove('show');
   }
 })
-
-/* // section - why choose seoul flower? 영역 */
-
-
-// wrapReasons.addEventListener('scroll', checkReasons)
-
-// checkReasons();
-
-// function checkReasons() {
-//   // const triggerBottom = window.innerHeight / 5 * 4;
-//   console.log(window.innerHeight / 5 * 4);
-
-//   reasons.forEach(reason => {
-//     const  reasonTop = reason.getBoundingClientRect().top;
-
-//     if(reasonTop < triggerBottom) {
-//       reason.classList.add('show');
-//     } else {
-//       reason.classList.remove('show');
-//     }
-//   })
-// }
 
 
 /* section delivery 영역 */
