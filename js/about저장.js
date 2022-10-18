@@ -19,16 +19,35 @@ fetch(url)
     })
     .then(json => {
       let items = json.items;
+      console.log(items);
       let result = '';
 
 
       items.map((item) => {
+
+        let title = item.snippet.title;
+        if(title.length >= 30) {
+          title = title.substr(0, 30) + '...';
+        }
+
+        let con = item.snippet.description;
+        if(con.length >= 100) {
+          con = con.substr(0, 100) + '...';
+        }
+        
+        let date = item.snippet.publishedAt;
+        date = date.split('T')[0];
+
         result += `
           <article>
             <a href="${item.snippet.resourceId.videoId}" class="pic">
               <img src="${item.snippet.thumbnails.medium.url}">
-              <i class="fa-solid fa-play play"></i>
             </a>
+            <div class="con">
+              <h2>${title}</h2>
+              <p>${con}</p>
+              <span>${date}</span>
+            </div>
           </article>
         `
       })
@@ -58,17 +77,3 @@ fetch(url)
         if(e.target == close) pop.remove();
       }
     })
-
-
-// about member change 부분
-
-const memberOne = document.querySelector('#member1');
-const memberThree = document.querySelector('#member3');
-
-function mouseover(member, num) {
-  member.setAttribute('src', `img/about-member${num}.jpg`);
-}
-
-function mouseleave(member, num) {
-  member.setAttribute('src', `img/about-member${num}.jpg`);
-}
