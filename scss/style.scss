@@ -2,8 +2,11 @@
 
 // reset css
 @import 'reset.scss';
-@import 'faqs.scss';
+@import 'shop.scss';
 @import 'about.scss';
+@import 'faqs.scss';
+@import 'contact.scss';
+
 
 // font style
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
@@ -178,7 +181,6 @@ h1, h2 {
 
     h1 {
       font-size: 34px;
-      color: #555;
       text-align: center;
       margin-bottom: 50px;
     }
@@ -229,7 +231,7 @@ h1, h2 {
             a {
               font-size: 20px;
               font-family: 'Cormorant Garamond', serif;
-              color: #798777;
+              color: #333;
             }
           }
         }
@@ -380,7 +382,7 @@ h1, h2 {
 #banner {
   width: 100%;
   padding: 150px 0;
-  background: url(../img/banner2.jpg) no-repeat center/cover;
+  background: url(../img/banner2.jpg) no-repeat center/cover fixed;
   .inner {
     width: 1180px;
     margin: 0 auto;
@@ -392,7 +394,7 @@ h1, h2 {
     }
     p {
       font: 16px/1.3 'arial';
-      color: #bbb;
+      color: #ddd;
       text-align: center;
     }
   }
