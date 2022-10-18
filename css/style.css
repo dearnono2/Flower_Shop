@@ -44,6 +44,7 @@ a {
 }
 .shop .inner .wrapper .category-sidebar {
   flex: 0.2;
+  position: relative;
   background: yellow;
 }
 .shop .inner .wrapper .category-sidebar .category-menu {
@@ -71,6 +72,7 @@ a {
 .shop .inner .wrapper .products .products-wrap .products-middle .product-items {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 .shop .inner .wrapper .products .products-wrap .products-middle .product-items .item {
   width: 30%;
