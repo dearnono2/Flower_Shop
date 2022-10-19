@@ -1,5 +1,6 @@
 let productMiddle = document.querySelector('.products-middle');
 
+// 판매 상품 반복 
 let products = `                
 <div class="product-items">
   <div class="item">

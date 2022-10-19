@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flower Shop</title>
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="main.js"></script>
+  <!-- kakao api - 실제 지도를 그리는 Javascript API를 불러오기 -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9cd7318fa05bd7c933e9c968cdc8ceb4 "></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/contact.js"></script>
   <script src="https://kit.fontawesome.com/a9d0d508cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -52,6 +55,46 @@
       </div>
     </section>
     <!-- // section top-pad content -->
+
+    <!-- section contact -->
+    <section class="contact">
+      <div class="inner">
+        <article>
+          <div class="shop-img">
+            <img src="img/shop.png" alt="our shop">
+          </div>
+        </article>
+        <article>
+          <div class="contact-txt">
+            <h2>FLOWER SHOP</h2>
+            <p>
+              FLOWER SHOP IS A FULL SERVICE FLORIST AND HOME, GARDEN, & GIFT SHOP. WE CARRY FRESH FLOWERS, PLANTS, CURATED GIFT COLLECTIONS, HOME & GARDEN DECOR, MICHIGAN MADE PRODUCTS, & MORE
+            </p>
+            <p>
+              Our store is open Tuesday - Sunday, 9am - 4pm. <br>
+              FLOWER SHOP office is staffed Tuesday - Friday, 9am - 5pm.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- // section contact -->
+
+    <!-- section content -->
+    <section class="location">
+      <div class="sub_vidual"></div>
+      <div class="inner">
+        <h1>LOCATION <span>찾아오시는 길</span></h1>
+
+        <div id="map"></div>
+
+        <ul class="traffic">
+          <li><a href="#">교통정보 보기</a></li>
+          <li class="on"><a href="#">교통정보 끄기</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- // section content -->
 
   <!-- footer -->
   <footer id="footer">
