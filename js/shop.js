@@ -1,7 +1,27 @@
-let productMiddle = document.querySelector('.products-middle');
+// 메뉴 카테고리 영역
+const category = document.querySelector('#category');
+const a = category.querySelectorAll('#category > li > a');
+const ul = category.querySelectorAll('ul');
+
+a[0].addEventListener('click', (e) => {
+  e.preventDefault();
+  ul[0].classList.toggle('on');
+})
+
+a[1].addEventListener('click', (e) => {
+  e.preventDefault();
+  ul[1].classList.toggle('on');
+})
+
+
+
+
+// 판매 상품 영역
+
+const productMiddle = document.querySelector('.products-middle');
 
 // 판매 상품 반복 
-let products = `                
+const products = `                
 <div class="product-items">
   <div class="item">
     <div class="img">
