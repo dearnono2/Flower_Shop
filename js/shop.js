@@ -3,16 +3,18 @@ const category = document.querySelector('#category');
 const a = category.querySelectorAll('#category > li > a');
 const ul = category.querySelectorAll('ul');
 
-a[0].addEventListener('click', (e) => {
-  e.preventDefault();
-  ul[0].classList.toggle('on');
-})
 
-a[1].addEventListener('click', (e) => {
-  e.preventDefault();
-  ul[1].classList.toggle('on');
-})
 
+// shop page - category list section
+function categoryListNum (num) {
+  a[num].addEventListener('click', (e) => {
+    e.preventDefault();
+    ul[num].classList.toggle('on');
+  })
+}
+
+categoryListNum(0);
+categoryListNum(1);
 
 
 
