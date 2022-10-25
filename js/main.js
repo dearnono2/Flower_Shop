@@ -39,13 +39,13 @@ next.addEventListener('click', (e) => {
 
 // 초기화 함수
 function init() {
-  wrapImgs.style.left = '-290px';
+  wrapImgs.style.left = '-300px';
 
   wrapImgs.prepend(wrapImgs.lastElementChild);
 
-  wrapImgs.style.width = `${290 * len}px`;
+  wrapImgs.style.width = `${300 * len}px`;
   articles.forEach((el) => {
-    el.style.width = `${1500 / len}px`;
+    el.style.width = `${1800 / len}px`;
   })
 }
 
@@ -55,7 +55,7 @@ function prevSlide() {
     value: '0',
     duration : 1000,
     callback : () => {
-      wrapImgs.style.left = '-290px';
+      wrapImgs.style.left = '-300px';
       wrapImgs.prepend(wrapImgs.lastElementChild);
       enableClick = true;
     }
@@ -65,10 +65,10 @@ function prevSlide() {
 function nextSlide() {
   new Anim(wrapImgs, {
     prop : 'left',
-    value: '-580px',
+    value: '-600px',
     duration : 1000,
     callback : () => {
-      wrapImgs.style.left = '-290px';
+      wrapImgs.style.left = '-300px';
       wrapImgs.append(wrapImgs.firstElementChild);
       enableClick = true;
     }

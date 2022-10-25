@@ -51,8 +51,6 @@ a {
   margin-top: 40px;
   padding: 30px;
   height: 1200px;
-  border: 4px solid #064420;
-  background: #fff;
 }
 .shop .inner .wrapper .category-sidebar .category-menu h2 {
   font-size: 22px;
@@ -92,7 +90,7 @@ a {
 }
 .shop .inner .wrapper .category-sidebar .category-menu #category > li ul {
   display: none;
-  background: pink;
+  background: #9ECCA4;
   margin-top: 10px;
   padding: 5px 10px 10px;
   border-radius: 10px;
@@ -248,6 +246,7 @@ a {
   position: absolute;
   width: 100%;
   border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .about .inner article .about-member p {
   flex: 0.5;
@@ -262,24 +261,27 @@ a {
 .about-flower-shop {
   position: relative;
   width: 100%;
-  height: 150vh;
+  height: 800px;
   background: url(../img/about-flower-bg.jpg) no-repeat center/cover fixed;
 }
 .about-flower-shop .inner {
+  position: position;
   width: 1180px;
   height: 100%;
   margin: 100px auto;
 }
 .about-flower-shop .inner .our-stroy {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 400px;
   height: 100%;
-  margin: 100px auto;
   background: #eee;
   text-align: center;
   letter-spacing: 1px;
 }
 .about-flower-shop .inner .our-stroy h2 {
-  font-size: 28px;
+  font-size: 48px;
   padding: 20px 0;
 }
 .about-flower-shop .inner .our-stroy p {
@@ -288,27 +290,25 @@ a {
 .about-flower-shop .inner .youtube {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .about-flower-shop .inner .youtube h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 .about-flower-shop .inner .youtube .vidList {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
 }
 .about-flower-shop .inner .youtube .vidList article {
-  width: 48%;
-  height: 400px;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 .about-flower-shop .inner .youtube .vidList article .pic {
   margin: 0 auto;
   position: relative;
   display: block;
-  width: 70%;
+  width: 100%;
 }
 .about-flower-shop .inner .youtube .vidList article .pic img {
   width: 100%;
@@ -318,9 +318,9 @@ a {
 }
 .about-flower-shop .inner .youtube .vidList article .pic .play {
   position: absolute;
-  top: 80px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   font-size: 30px;
   width: 50px;
   height: 50px;
@@ -723,7 +723,7 @@ h1, h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 #visual .inner {
   width: 1180px;
@@ -732,9 +732,17 @@ h1, h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: 1px;
 }
 #visual .inner h1 {
   color: #fff;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#visual .inner P {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
 }
 #visual .inner #visual-btn {
   font-size: 16px;
@@ -758,7 +766,7 @@ h1, h2 {
   padding: 200px 0;
 }
 #new-arrival .inner {
-  width: 1120px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
@@ -771,33 +779,41 @@ h1, h2 {
   position: absolute;
   font-size: 50px;
   color: #555;
-  bottom: 150px;
+  top: 0;
   cursor: pointer;
 }
 #new-arrival .inner .fa-angle-left {
-  left: -100px;
+  top: 0;
+  left: 0;
 }
 #new-arrival .inner .fa-angle-right {
-  right: -100px;
+  top: 0;
+  right: 0;
 }
 #new-arrival .inner .wrap {
-  width: 100%;
+  position: relative;
+  width: 1200px;
+  height: 320px;
   overflow: hidden;
 }
 #new-arrival .inner .wrap .wrap-imgs {
-  width: 1700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1800px;
+  height: 100%;
+  display: flex;
+  transition: 0.5s;
 }
 #new-arrival .inner .wrap .wrap-imgs article {
-  float: left;
+  flex: 1;
   width: 250px;
-  margin-right: 40px;
+  margin: 0 25px;
   text-align: center;
-}
-#new-arrival .inner .wrap .wrap-imgs article:last-of-type {
-  margin-right: 0;
+  background: #fff;
 }
 #new-arrival .inner .wrap .wrap-imgs article .pic {
-  width: 100%;
+  width: 250px;
   height: 250px;
   overflow: hidden;
 }
@@ -818,13 +834,18 @@ h1, h2 {
   font-family: "Cormorant Garamond", serif;
   color: #333;
 }
+#new-arrival .inner .wrap .wrap-imgs article p {
+  margin-bottom: 10px;
+}
 
 .new-arrival-bg {
   position: absolute;
   width: 100%;
   height: 340px;
   bottom: 0;
-  background: #BDD2B6;
+  background-image: url(../img/white-wood.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 
