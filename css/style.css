@@ -1023,17 +1023,57 @@ h1, h2 {
   float: left;
 }
 #why-seoul-flower .inner .wrap article:nth-of-type(1) .reason {
-  width: 100%;
+  position: relative;
+  width: 400px;
   padding: 50px;
   margin: 100px 0 250px 0;
   transform: translateX(-200%);
   transition: transform 0.4s ease;
+  background: #FAF1E6;
+  border: 3px solid #000;
+  border-radius: 20px;
 }
 #why-seoul-flower .inner .wrap article:nth-of-type(1) .reason img {
   width: 100%;
+  margin-bottom: 10px;
+}
+#why-seoul-flower .inner .wrap article:nth-of-type(1) .reason p {
+  font-size: 30px;
+  text-align: left;
+  padding: 10px;
 }
 #why-seoul-flower .inner .wrap article:nth-of-type(1) .reason.show {
   transform: translateX(0);
+}
+#why-seoul-flower .inner .wrap article:nth-of-type(1) .reason::before {
+  box-sizing: border-box;
+  display: block;
+  content: "\f10e";
+  font: var(--fa-font-solid);
+  font-size: 60px;
+  width: 80px;
+  height: 80px;
+  padding-top: 14px;
+  background: #fff;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  border-radius: 50%;
+}
+#why-seoul-flower .inner .wrap article:nth-of-type(1) .reason::after {
+  box-sizing: border-box;
+  display: block;
+  content: "\f10d";
+  font: var(--fa-font-solid);
+  font-size: 60px;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  background: #fff;
+  position: absolute;
+  bottom: -34px;
+  right: -34px;
+  border-radius: 50%;
 }
 #why-seoul-flower .inner .wrap article:nth-of-type(2) {
   float: left;
