@@ -1,6 +1,6 @@
 /* section - occasion 영역 */
 
-const wrap = document.querySelector('.wrap');
+const wrap = document.querySelector('.slider-wrapper');
 const wrapImgs = wrap.querySelector('.wrap-imgs');
 const articles = wrap.querySelectorAll('article');
 
@@ -52,7 +52,7 @@ function init() {
 function prevSlide() {
   new Anim(wrapImgs, {
     prop : 'left',
-    value: '0',
+    value: 0,
     duration : 1000,
     callback : () => {
       wrapImgs.style.left = '-300px';
@@ -65,7 +65,7 @@ function prevSlide() {
 function nextSlide() {
   new Anim(wrapImgs, {
     prop : 'left',
-    value: '-600px',
+    value: -600,
     duration : 1000,
     callback : () => {
       wrapImgs.style.left = '-300px';
@@ -99,7 +99,7 @@ window.addEventListener('scroll', (e) => {
     reasons[1].classList.remove('show');
   }
 
-  if(window.scrollY > 5000) {
+  if(window.scrollY > 4900) {
     reasons[2].classList.add('show');
   } else if (window.scrollY > 5600) {
     reasons[2].classList.remove('show');

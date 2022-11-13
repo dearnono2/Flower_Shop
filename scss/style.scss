@@ -208,7 +208,7 @@ h1, h2 {
     top: 0; right: 0;
     }
 
-    .wrap {
+    .slider-wrapper {
       position: relative;
       width: 1200px; height: 320px;
       overflow: hidden;
@@ -218,7 +218,8 @@ h1, h2 {
         top: 0; left: 0;
         width: 1800px; height: 100%;
         display: flex;
-        transition: 0.5s;
+        // transition: 0.5s;
+        
         article {
           flex: 1;
           // float: left;
@@ -226,8 +227,7 @@ h1, h2 {
           margin: 0 25px;
           text-align: center;
           background: #fff;
-          // box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-          
+          box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
           
           .pic {
             width: 250px; height: 250px;
@@ -236,7 +236,6 @@ h1, h2 {
             img {
               width: 100%; height: 100%;
               object-fit: cover;
-              transition: all 0.5s;
             }
             &:hover img {
               transform: scale(1.1);
@@ -503,6 +502,7 @@ h1, h2 {
         &:nth-of-type(2) {
           float: left;
           height: 2000px;
+          background: #eee;
           // sticky 속성은 부모의 높이 px이 필수. %단위는 x
           .reason-answer {
             position: sticky;

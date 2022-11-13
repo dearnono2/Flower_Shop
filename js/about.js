@@ -38,7 +38,7 @@ fetch(url)
     vidList.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // if(!e.target.closest('a')) return;
+      if(!e.target.closest('a')) return;
       const vidId = e.target.closest('a').getAttribute('href');
 
       let pop = document.createElement('figure');
