@@ -53,7 +53,7 @@ function prevSlide() {
   new Anim(wrapImgs, {
     prop : 'left',
     value: 0,
-    duration : 1000,
+    duration : 500,
     callback : () => {
       wrapImgs.style.left = '-300px';
       wrapImgs.prepend(wrapImgs.lastElementChild);
@@ -66,7 +66,7 @@ function nextSlide() {
   new Anim(wrapImgs, {
     prop : 'left',
     value: -600,
-    duration : 1000,
+    duration : 500,
     callback : () => {
       wrapImgs.style.left = '-300px';
       wrapImgs.append(wrapImgs.firstElementChild);
