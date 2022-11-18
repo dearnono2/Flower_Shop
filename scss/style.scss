@@ -165,10 +165,18 @@ h1, h2 {
       color: #fff;
       background-color: transparent;
       cursor: pointer;
+      
+      span {
+        a {
+          color: #fff;
+        }
+      }
       &:hover {
         background: #fff;
         opacity: 0.8;
-        color: black;
+        a {
+          color: #000;
+        }
       }
     }
   }

@@ -756,10 +756,15 @@ h1, h2 {
   background-color: transparent;
   cursor: pointer;
 }
+#visual .inner #visual-btn span a {
+  color: #fff;
+}
 #visual .inner #visual-btn:hover {
   background: #fff;
   opacity: 0.8;
-  color: black;
+}
+#visual .inner #visual-btn:hover a {
+  color: #000;
 }
 
 /* section - new to store 영역 */
